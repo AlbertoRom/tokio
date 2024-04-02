@@ -1,0 +1,154 @@
+main {
+  height: 100vh;
+  margin: 0;
+  padding: 2rem;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: white;
+  color: $uoc-corporate;
+  font-family: $fontFamily;
+  margin-left: 10%;
+  margin-right: 10%;
+  animation-duration: 0.5s;
+  animation-name: change_opacity;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 2rem;
+  color: $uoc-corporate;
+  font-family: $fontFamily;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+header a{
+  color: $uoc-corporate;
+}
+
+ul {
+  display: flex;
+
+  padding: 10px;
+}
+
+ul a {
+  color: $uoc-corporate;
+  text-decoration: $textDecoration;
+  padding: 8px;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: $textDecoration;
+  color: $uoc-corporate;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: $hoverColor; 
+}
+
+body{
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+  font-family: $fontFamily;
+  background-color: $uoc-bg;
+  border-radius: 2rem;
+  color: $uoc-corporate;
+}
+
+img{
+  border-radius: 2rem;
+  width: 40%;
+}
+
+.row-image-text{
+  display: flex;
+  align-items: flex-start;
+}
+
+.column-image-text{
+  display: none;
+}
+
+.right{
+  margin-left: 4em; 
+  width: 40%;
+}
+
+.left{
+  margin-right: 4em; 
+  width: 40%;
+}
+
+.row-image img{
+  width: 20%;
+}
+
+@keyframes change_opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.red-button {
+  background-color: #E80700;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.red-button:hover {
+  background-color: #FF0000;
+}
+
+
+@media (max-width: 900px) {
+
+  header{
+    flex-direction: column;
+  }
+
+  .row-image-text{
+    display: none;
+  }
+
+  img{
+    width: 90%;
+  }
+
+  .row-image img{
+    width: 90%;
+  }
+
+  .column-image-text{
+    display: block;
+  }
+  
+}

@@ -55,10 +55,6 @@
   animation-name: change_opacity;
 }
 
-.imagen{
-  border-radius: 2rem;
-  width: 40%;
-}
 
 .image {
   border-radius: 2rem;
@@ -130,7 +126,7 @@
     flex-direction: column;
   }
 
-  .row-image-text {
+  .image-text {
     display: none;
   }
 
@@ -138,11 +134,11 @@
     width: 90%;
   }
 
-  .row-image img {
+  .image--small {
     width: 90%;
   }
 
-  .column-image-text {
+  .image-text--column {
     display: block;
   }
 }

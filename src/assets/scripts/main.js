@@ -1,20 +1,12 @@
-/**
- * Import dependencies from node_modules
- * see commented examples below
- */
-
-// import 'some-node-module';
-// import SomeModule from 'some-node-module';
-
-/**
- * Write any other JavaScript below
- */
-
-+( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
-} )();
-
 function sendMessage() {
+  const nombre = document.getElementById('nombre');
+  const email = document.getElementById('email');
+  const consulta = document.getElementById('consulta');
+  
+  if (!nombre.value || !email.value || !consulta.value) {
+    alert('Todos los campos son requeridos');
+    return;
+  }
+
   alert("Tu consulta ha sido enviada");
 }

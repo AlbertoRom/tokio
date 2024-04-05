@@ -7,19 +7,11 @@
     <meta name="viewport" content="width=device-width">
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss">
     <link rel="preload" href="https://fonts.googleapis.com/css?display=swap&family=Quicksand" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <title>とうきょう / Tokio</title>
   </head>
   <body class="body">
-    <header class="header">
-      <a class="header__link" title="Tokio" href="#introduccion">
-        <h2 style="display:inline-block;">とうきょう / Tokio</h2>
-      </a>
-      <ul class="menu">
-          <li class="menu__item"><a class="menu__item" href="#historia">Historia</a></li>
-          <li class="menu__item"><a class="menu__item" href="#cultura">Cultura</a></li>
-          <li class="menu__item"><a class="menu__item" href="#gastronomia">Gastronomia</a></li>
-      </ul>
-    </header>
+    <include src="./views/header.html"></include>
     <main class="main">
       <section id="introduccion">
         <h1>Donde el pasado se fusiona con el futuro en cada esquina</h1>
@@ -28,8 +20,8 @@
       </section>
       <br/><br/>
       <section id="historia">
-        <div class="image-text">
-          <div style="display: flex; flex-direction: column;">
+        <div class="image-text image-text--row ">
+          <div class="text">
             <h2>Historia</h2>
             <p>La historia de Tokio es un relato fascinante de evolución urbana y transformación cultural a lo largo de los siglos. Desde sus modestos inicios como un pequeño pueblo de pescadores llamado Edo hasta convertirse en la próspera y vibrante metrópolis que es hoy en día, Tokio ha experimentado un viaje extraordinario. A lo largo de los siglos, ha sido testigo de períodos de auge y declive, desde el florecimiento durante el período Edo hasta la devastación causada por los terremotos y bombardeos durante la Segunda Guerra Mundial. Sin embargo, Tokio ha demostrado una notable capacidad para reconstruirse y reinventarse, convirtiéndose en un centro global de cultura, tecnología y negocios que continúa inspirando y asombrando a millones de personas en todo el mundo.</p>
           </div>
@@ -43,9 +35,9 @@
       </section>
       <br/><br/>
       <section id="cultura">
-        <div class="image-text"> 
+        <div class="image-text image-text--row "> 
           <img src="./assets/images/cultura_tokio.webp" class="image image--left">
-          <div style="display: flex; flex-direction: column;">
+          <div class="text">
             <h2>Cultura</h2>
             <p>La cultura de Tokio es una amalgama vibrante y dinámica que refleja la rica historia y diversidad de la ciudad. Como epicentro de la moda, la tecnología y las artes, Tokio es un crisol donde convergen tradiciones ancestrales y tendencias contemporáneas. Desde la exuberante moda callejera de Harajuku hasta la elegante ceremonia del té en los antiguos barrios de la ciudad, Tokio ofrece una gama infinita de experiencias culturales. Los festivales tradicionales, como el hanami (la observación de flores de cerezo) y el matsuri (festivales religiosos), coexisten con la efervescencia de la vida nocturna y la gastronomía de clase mundial que abarca desde puestos callejeros de ramen hasta restaurantes con estrellas Michelin. Además, Tokio es un centro neurálgico para la cultura pop japonesa, desde el anime y el manga hasta la música J-Pop, que ejerce una influencia global. En resumen, la cultura de Tokio es vibrante, diversa y siempre sorprendente, atrayendo a visitantes de todo el mundo con su energía inigualable y su capacidad para reinventarse constantemente.</p>
           </div>
@@ -72,12 +64,12 @@
         <p>¡No dudes en enviar tu consulta!</p>
         <form>
           <label for="nombre">Nombre y apellidos</label><br>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required><br><br>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre"><br><br>
           <label for="email">Correo electrónico</label><br>
-          <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required><br><br>
+          <input type="email" id="email" name="email" placeholder="Tu correo electrónico"><br><br>
           <label for="consulta">Consulta</label><br>
-          <textarea name="consulta" id="consulta" cols="25" rows="15" required></textarea><br><br>
-          <input class="red-button" type="submit" onclick="sendMessage()"></input>
+          <textarea name="consulta" id="consulta" cols="25" rows="15"></textarea><br><br>
+          <button class="red-button" type="submit" onclick="sendMessage()">Enviar  <i class='fa fa-paper-plane' aria-hidden='true'></i></button>
         </form>
       </section>
       <br/><br/>

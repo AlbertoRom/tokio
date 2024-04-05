@@ -8,14 +8,18 @@
   align-items: center;
   padding: 10px;
   border-radius: 2rem;
-  color: $uoc-corporate;
+  color: $text-color;
   font-family: $fontFamily;
   margin-left: 10%;
   margin-right: 10%;
 }
 
+.header__title{
+  display: inline-block;
+}
+
 .header__link {
-  color: $uoc-corporate;
+  color: $text-color;
 }
 
 .menu {
@@ -30,7 +34,7 @@
 
 .menu__item a {
   text-decoration: $textDecoration;
-  color: $uoc-corporate;
+  color: $text-color;
   font-size: 16px;
   transition: color 0.3s ease;
   padding: 8px;
@@ -47,7 +51,7 @@
   font-size: 16px;
   line-height: 24px;
   background-color: white;
-  color: $uoc-corporate;
+  color: $text-color;
   font-family: $fontFamily;
   margin-left: 10%;
   margin-right: 10%;
@@ -74,12 +78,20 @@
 }
 
 .image-text {
-  display: flex;
   align-items: flex-start;
+}
+
+.image-text--row {
+  display: flex;
 }
 
 .image-text--column {
   display: none;
+}
+
+.text{
+  display: flex;
+  flex-direction: column;
 }
 
 .red-button {
@@ -104,9 +116,9 @@
   padding: 15px;
   margin-top: auto;
   font-family: $fontFamily;
-  background-color: $uoc-bg;
+  background-color: $background-color;
   border-radius: 2rem;
-  color: $uoc-corporate;
+  color: $text-color;
 }
 
 @keyframes change_opacity {
@@ -126,8 +138,12 @@
     flex-direction: column;
   }
 
-  .image-text {
+  .image-text--row  {
     display: none;
+  }
+
+  .image-text--column {
+    display: block;
   }
 
   .image {
@@ -136,9 +152,5 @@
 
   .image--small {
     width: 90%;
-  }
-
-  .image-text--column {
-    display: block;
   }
 }
